@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+
+    <title>About Us</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="index.html" class="nav_logo">DevMatrix</a>
+        <ul class="nav_items">
+          <li class="nav_items">
+            <a href="index.html#home" class="nav_link">Home</a>
+            <a href="index.html#product" class="nav_link">Product</a>
+            <a href="index.html#services" class="nav_link">Services</a>
+            <a href="index.html#contact" class="nav_link">Contact</a>
+          </li>
+        </ul>
+        <button class="button" id="loginBtn">Login</button>
+      </nav>
+    </header>
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>Welcome to our website! We are a team of dedicated professionals committed to providing top-notch services and products to our customers. Our mission is to deliver excellence in every aspect of our business, from customer service to product quality.</p>
+        <h3>Our Mission</h3>
+        <p>Our mission is to empower individuals and businesses by providing innovative solutions that drive success. We strive to exceed our customers' expectations through continuous improvement and customer-centric approaches.</p>
+        <h3>Our Vision</h3>
+        <p>Our vision is to be a global leader in our industry, recognized for our commitment to quality, innovation, and customer satisfaction. We aim to create a positive impact on the communities we serve and contribute to a sustainable future.</p>
+        <h3>Our Values</h3>
+        <ul>
+          <li><strong>Integrity:</strong> We conduct our business with the highest ethical standards and transparency.</li>
+          <li><strong>Innovation:</strong> We embrace creativity and strive to bring new ideas to life.</li>
+          <li><strong>Customer Focus:</strong> Our customers are at the heart of everything we do. We listen to their needs and work tirelessly to meet them.</li>
+          <li><strong>Excellence:</strong> We are committed to delivering the best in everything we do.</li>
+          <li><strong>Teamwork:</strong> We believe in the power of collaboration and work together to achieve our goals.</li>
+        </ul>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 DevMatrix company Website. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <button type="submit" class="button">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+
+      var modal = document.getElementById("loginModal");
+      var btn = document.getElementById("loginBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

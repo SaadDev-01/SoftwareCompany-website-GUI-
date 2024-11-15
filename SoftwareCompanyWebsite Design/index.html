@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    
+    <title>Software company Website</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="#home" class="nav_logo">- DevMatrix -</a>
+        <ul class="nav_items">
+          <li class="nav_items">
+            <a href="#home" class="nav_link">Home</a>
+            <a href="#product" class="nav_link">Product</a>
+            <a href="#services" class="nav_link">Services</a>
+            <a href="#contact" class="nav_link">Contact</a>
+          </li>
+        </ul>
+        <button class="button" id="loginBtn">Login</button>
+      </nav>
+    </header>
+    <section id="home" class="home">
+      <div class="home_content">
+        <h1>Welcome to Our Website</h1>
+        <p>Your journey to excellence starts here.</p>
+        <button class="button" onclick="location.href='about.html'">Get Started</button>
+      </div>
+    </section>
+    <section id="product" class="product">
+      <div class="container">
+        <h2>Our Products</h2>
+        <p>Explore our range of products designed to meet your needs. We offer high-quality, innovative solutions that cater to various industries and applications.</p>
+        <div class="product_grid">
+          <div class="product_item">
+            <img src="images/product1.jpg" alt="Product 1" class="product_image">
+            <h3>Product 1</h3>
+            <p>Product 1 is a state-of-the-art solution designed to streamline your workflow and enhance productivity. It features advanced technology and user-friendly interfaces.</p>
+          </div>
+          <div class="product_item">
+            <img src="images/product2.jpg" alt="Product 2" class="product_image">
+            <h3>Product 2</h3>
+            <p>Product 2 offers unparalleled performance and reliability. It is built with the latest innovations to ensure optimal efficiency and effectiveness in your operations.</p>
+          </div>
+          <div class="product_item">
+            <img src="images/product3.jpg" alt="Product 3" class="product_image">
+            <h3>Product 3</h3>
+            <p>Product 3 is a versatile and scalable solution that adapts to your growing needs. It provides robust features and seamless integration with your existing systems.</p>
+          </div>
+          <div class="product_item">
+            <img src="images/product4.jpg" alt="Product 4" class="product_image">
+            <h3>Product 4</h3>
+            <p>Product 4 is designed to deliver exceptional value and performance. It combines cutting-edge technology with intuitive design to offer a superior user experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="services" class="services">
+      <div class="container">
+        <h2>Our Services</h2>
+        <div class="service_item">
+          <h3>Service 1</h3>
+          <p>We offer a wide range of services to meet your needs, including web development, mobile app development, and more.</p>
+        </div>
+        <div class="service_item">
+          <h3>Service 2</h3>
+          <p>Our team of experts is dedicated to providing top-notch services to help you achieve your business goals.</p>
+        </div>
+        <div class="service_item">
+          <h3>Service 3</h3>
+          <p>We use the latest technologies and best practices to deliver high-quality solutions that exceed your expectations.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <p>Feel free to reach out to us for any inquiries. We are here to help you.</p>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <button type="submit" class="button">Send Message</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 DevMatrix company website. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- For Login -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+          <button type="submit" class="button">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      var modal = document.getElementById("loginModal");
+      var btn = document.getElementById("loginBtn");
+      var span = document.getElementsByClassName("close")[0];
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
